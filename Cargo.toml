@@ -5,10 +5,9 @@ edition = "2024"
 
 [dependencies]
 bootloader = "0.9"
+volatile = "0.2.6"
+spin = "0.5.2"
 
-[profile.dev]
-panic = "abort" # disable stack unwinding on panic
-
-# the profile used for `cargo build --release`
-[profile.release]
-panic = "abort" # disable stack unwinding on panic
+[dependencies.lazy_static]
+version = "1.0"
+features = ["spin_no_std"]
