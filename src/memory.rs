@@ -2,7 +2,7 @@ use x86_64::PhysAddr;
 use x86_64::VirtAddr;
 use x86_64::structures::paging::OffsetPageTable;
 use x86_64::structures::paging::PageTable;
-use x86_64::structures::paging::{FrameAllocator, Mapper, Page, PhysFrame, Size4KiB};
+use x86_64::structures::paging::{FrameAllocator, PhysFrame, Size4KiB};
 
 unsafe fn active_level_4_table(physical_memory_offset: VirtAddr) -> &'static mut PageTable {
     use x86_64::registers::control::Cr3;
